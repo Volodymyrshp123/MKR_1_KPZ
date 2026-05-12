@@ -345,7 +345,7 @@ public class LightElementNode : LightNode
     }
 
     // Override lifecycle hooks
-    public override void OnCreated() { Console.WriteLine($"{TagName} created"); }
+    public override void OnClassListApplied() { Console.WriteLine($"{TagName} class list applied"); }
 
     public override IEnumerable<LightNode> GetIterator(TraversalType type)
     {
