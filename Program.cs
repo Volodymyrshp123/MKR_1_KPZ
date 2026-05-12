@@ -344,14 +344,6 @@ public class LightElementNode : LightNode
         return $"<{TagName}{classAttribute}>{InnerHTML()}</{TagName}>";
     }
 
-    // Override lifecycle hooks
-    public override void OnCreated() { Console.WriteLine($"{TagName} created"); }
-    public override void OnInserted() { Console.WriteLine($"{TagName} inserted"); }
-    public override void OnRemoved() { Console.WriteLine($"{TagName} removed"); }
-    public override void OnStylesApplied() { Console.WriteLine($"{TagName} styles applied"); }
-    public override void OnClassListApplied() { Console.WriteLine($"{TagName} class list applied"); }
-    public override void OnTextRendered() { Console.WriteLine($"{TagName} text rendered"); }
-
     public override IEnumerable<LightNode> GetIterator(TraversalType type)
     {
         if (type == TraversalType.DepthFirst)
