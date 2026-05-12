@@ -345,7 +345,7 @@ public class LightElementNode : LightNode
     }
 
     // Override lifecycle hooks
-    public override void OnRemoved() { Console.WriteLine($"{TagName} removed"); }
+    public override void OnTextRendered() { Console.WriteLine($"{TagName} text rendered"); }
 
     public override IEnumerable<LightNode> GetIterator(TraversalType type)
     {
