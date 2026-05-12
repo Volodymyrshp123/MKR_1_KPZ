@@ -344,6 +344,9 @@ public class LightElementNode : LightNode
         return $"<{TagName}{classAttribute}>{InnerHTML()}</{TagName}>";
     }
 
+    // Override lifecycle hooks
+    public override void OnTextRendered() { Console.WriteLine($"{TagName} text rendered"); }
+
     public override IEnumerable<LightNode> GetIterator(TraversalType type)
     {
         if (type == TraversalType.DepthFirst)
